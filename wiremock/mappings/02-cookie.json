@@ -1,0 +1,20 @@
+{
+    "request": {
+      "method": "GET",
+      "url": "/hiTest",
+      "headers": {
+        "testHeaderRequest": {
+          "matches": "\\d+"
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "headers" : {
+        "testHeaderResponse" : "{{math request.headers.testHeaderRequest '+' 1}}",
+        "Set-Cookie": ["TestCookieName=TestCookieValue; path=/; Secure; HttpOnly"]
+      },
+      "transformers": ["response-template"],
+      "body": "testOk"
+    }
+  }

@@ -1,0 +1,24 @@
+{
+    "request": {
+      "method": "POST",
+      "urlPattern": "/response/\\w+",
+      "bodyPatterns": [
+        {
+          "matchesJsonPath": "$.param1"
+        },
+        {
+          "matchesJsonPath": "$.param2"
+        }
+      ]
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "transformers": [
+        "response-template"
+      ],
+      "body": "{\"name\":\"{{request.pathSegments.[1]}}\", \"result\":\"{{parseJson request.body 'bodyJson'}}{{bodyJson.param1}}-{{bodyJson.param2}}\"}"
+    }
+  }
