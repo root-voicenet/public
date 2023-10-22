@@ -1,0 +1,13 @@
+WEB_HOST: '0.0.0.0'
+WEB_PORT: 8080
+
+LOGGING_LEVEL: 'INFO'
+LOGGING_FORMAT: '%(asctime)-15s | %(levelname)s | %(filename)s | %(lineno)d: %(message)s'
+
+KAFKA_BROKER: "vm3.squadsecfield.ru:9092"
+SRC_DATA_TOPIC: "httpRequest"
+LOG_DATA_TOPIC: "requestCheckResultLog"
+ANALYZER_NAME: "srv-ml-class-analyzer"
+INCLUDE_MIME_TYPES: "application/json,text/html"
+EXCLUDE_EXTENSIONS: "png,jpg,gif,webp,doc,pdf,exe,mp3,avi"
+SCORE_THRESHOLD: 0.6

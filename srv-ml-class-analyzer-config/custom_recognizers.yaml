@@ -1,0 +1,15 @@
+recognizers:
+  -
+    name: "im_from_git_voicenet"
+    supported_language: "en"
+    patterns:
+      -
+         name: "zip code (weak)"
+         regex: "(\\b\\d{5}(?:\\-\\d{4})?\\b)"
+         score: 0.3
+
+    context:
+     - zip
+     - code
+    supported_entity: "ZIP"
+ 
