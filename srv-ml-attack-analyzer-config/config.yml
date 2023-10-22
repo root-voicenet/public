@@ -1,0 +1,16 @@
+WEB_PORT: 8080
+
+LOGGING_LEVEL: 'INFO'
+LOGGING_FORMAT: '%(asctime)-15s | %(levelname)s | %(filename)s | %(lineno)d: %(message)s'
+
+KAFKA_BROKER: "vm3.squadsecfield.ru:9092"
+SRC_DATA_TOPIC: "httpRequest"
+PROCESSED_DATA_TOPIC: "responseFromAnalyzer"
+LOG_DATA_TOPIC: "requestCheckResultLog"
+
+VECTOR: "vectorizer_char_token.pkl"
+MODEL: "model_char_token.pkl"
+TOKENIZER: "tokenizer_data.json"
+BATCH_LEN: "30"
+ANALYZER_NAME: "srv-ml-attack-analyzer"
+THRESHOLD: "0.5"
