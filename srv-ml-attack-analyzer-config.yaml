@@ -14,4 +14,4 @@ TOKENIZER: "tokenizer_data.json"
 BATCH_LEN: "30"
 ANALYZER_NAME: "srv-ml-attack-analyzer"
 THRESHOLD: "0.5"
-USE_GPT: false
+USE_GPT: "true"
